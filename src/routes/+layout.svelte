@@ -9,11 +9,10 @@
 	/** @type {import('./$types').LayoutServerData} */
 	export let data;
 
-	$: if (browser && data?.analyticsId) {
+	$: if (browser) {
 		webVitals({
 			path: $page.url.pathname,
-			params: $page.params,
-			analyticsId: data.analyticsId
+			params: $page.params
 		});
 	}
 </script>
