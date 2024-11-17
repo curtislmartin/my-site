@@ -1,4 +1,4 @@
-# My-site
+# My site
 
 Source files for my personal website.
 
