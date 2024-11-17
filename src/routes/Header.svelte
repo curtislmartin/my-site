@@ -16,7 +16,11 @@
 
 <header class="flex items-center justify-between p-4">
 	<a href="/">
-		<img src={lightMode ? logo : logoDark} alt="Logo" class="h-10 w-10" />
+		{#if lightMode}
+			<img src={logo} alt="Logo" class="h-10 w-10" />
+		{:else}
+			<img src={logoDark} alt="Logo" class="h-10 w-10" />
+		{/if}
 	</a>
 
 	<div class="flex items-center justify-between space-x-8">
