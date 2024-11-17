@@ -5,8 +5,8 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test": "playwright test",
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
@@ -19,7 +19,9 @@
 		"@sveltejs/adapter-vercel": "^5.4.7",
 		"@sveltejs/kit": "^2.8.1",
 		"@sveltejs/vite-plugin-svelte": "^4.0.1",
+		"@tsconfig/svelte": "^5.0.4",
 		"@types/eslint": "^9.6.1",
+		"@types/node": "^22.9.0",
 		"autoprefixer": "^10.4.20",
 		"clsx": "^2.1.1",
 		"eslint": "^9.15.0",
@@ -36,6 +38,7 @@
 		"tailwind-variants": "^0.3.0",
 		"tailwindcss": "^3.4.15",
 		"tailwindcss-animate": "^1.0.7",
+		"ts-node": "^10.9.2",
 		"typescript": "^5.6.3",
 		"vite": "^5.4.11",
 		"vitest": "^2.1.5",
@@ -46,6 +49,7 @@
 	"dependencies": {
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/typography": "^0.5.15",
-		"lucide-svelte": "^0.460.1"
+		"lucide-svelte": "^0.460.1",
+		"mode-watcher": "^0.4.1"
 	}
 }

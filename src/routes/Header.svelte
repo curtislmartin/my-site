@@ -1,15 +1,15 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
+	import { LightSwitch } from '$lib/components/ui/light-switch';
+	// import logo from '$lib/images/logo.svg';
 	import github from '$lib/images/github.svg';
 </script>
 
 <header>
-	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
+	<div class="flex items-center">
+		<LightSwitch />
 	</div>
+	<!--
 
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -32,9 +32,9 @@
 		<a href="https://github.com/sveltejs/kit">
 			<img src={github} alt="GitHub" />
 		</a>
-	</div>
+	</div> -->
 </header>
-
+<!--
 <style>
 	header {
 		display: flex;
@@ -123,4 +123,4 @@
 	a:hover {
 		color: var(--color-theme-1);
 	}
-</style>
+</style> -->
