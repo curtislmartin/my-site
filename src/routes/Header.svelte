@@ -1,13 +1,33 @@
 <script>
 	import { page } from '$app/stores';
 	import { LightSwitch } from '$lib/components/ui/light-switch';
-	// import logo from '$lib/images/logo.svg';
-	import github from '$lib/images/github.svg';
+	import logo from '$lib/images/light-mode.svg';
+	import logoDark from '$lib/images/dark-mode.svg';
+	import { mode } from 'mode-watcher';
+
+	let navItems = [
+		{ label: 'Projects', href: '/projects' },
+		{ label: 'CV', href: '/cv' },
+		{ label: 'Contact', href: '/contact' }
+	];
+
+	let lightMode = $derived($mode === 'light');
 </script>
 
-<header>
-	<div class="flex items-center">
-		<LightSwitch />
+<header class="flex items-center justify-between p-4">
+	<a href="/">
+		<img src={lightMode ? logo : logoDark} alt="Logo" class="h-10 w-10" />
+	</a>
+
+	<div class="flex items-center justify-between space-x-8">
+		<nav class="flex space-x-4">
+			{#each navItems as item}
+				<a href={item.href}>{item.label}</a>
+			{/each}
+		</nav>
+		<div class="flex items-center">
+			<LightSwitch />
+		</div>
 	</div>
 	<!--
 
