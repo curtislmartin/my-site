@@ -1,0 +1,11 @@
+{
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		"config.md": "*.config.js,*.config.ts,*.config.cjs,tsconfig.json,.prettierrc,.npmrc,.eslintrc.*,*.ignore,components.json, .prettierignore, .gitignore, .eslintignore, pnpm-lock.yaml, package.json"
+	},
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svelte-kit": true,
+		"**/node_modules": true
+	}
+}
