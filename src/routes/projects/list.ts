@@ -1,7 +1,16 @@
-export const list = [
+export const currentProjects = [
 	{
-		title: 'Project 1',
-		description: 'Description 1',
+		title: 'This site!',
+		description: `Currently under construction, slowly building!`,
+		page: '../../../content/projects/invoice-export.md',
 		link: '/projects/1'
+	}
+];
+export const previousProjects = [
+	{
+		title: 'Invoice Export',
+		description: 'Description 2',
+		page: '../../../content/projects/invoice-export.md',
+		link: '/temp'
 	}
 ];

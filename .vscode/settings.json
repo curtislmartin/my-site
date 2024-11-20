@@ -6,6 +6,6 @@
 	"files.exclude": {
 		"**/.git": true,
 		"**/.svelte-kit": true,
-		"**/node_modules": false
+		"**/node_modules": true
 	}
 }
