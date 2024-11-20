@@ -21,7 +21,7 @@
 </script>
 
 <!-- bg-background -->
-<div class="theme-transition mx-auto flex min-h-screen max-w-4xl flex-col px-4 py-2 sm:px-6">
+<div class="mx-auto flex min-h-screen max-w-4xl flex-col px-4 py-2 sm:px-6">
 	<Header />
 	<main class="">
 		{@render children?.()}
@@ -29,7 +29,7 @@
 
 	<Footer />
 </div>
-<ModeWatcher defaultMode="system" />
+<ModeWatcher defaultMode="system" disableTransitions={true} />
 
 <style>
 	main {

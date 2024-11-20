@@ -63,8 +63,13 @@
 		--sidebar-ring: 217.2 91.2% 59.8%;
 	}
 
+
+	/*
 	:root,
-	.dark {
+	.dark, */
+	/* :not([data-vaul-drawer]),
+	::before,
+	::after {
 		transition:
 			color-scheme 0.3s ease,
 			background-color 0.3s ease,
@@ -72,11 +77,10 @@
 			border-color 0.3s ease,
 			fill 0.3s ease,
 			stroke 0.3s ease;
-	}
-
+	} */
 
 	/* Apply transitions to all elements that use theme colors */
-	*:not([data-vaul-drawer], [data-vaul-overlay]),
+	/* *:not([data-vaul-drawer], [data-vaul-overlay]),
 	::before,
 	::after {
 		transition:
@@ -86,12 +90,12 @@
 			outline-color 0.15s ease,
 			fill 0.15s ease,
 			stroke 0.15s ease !important;
-	}
+	} */
 }
 
 /* Add specific mobile optimization */
 @media (max-width: 640px) {
-	*:not([data-vaul-drawer], [data-vaul-overlay], [data-state]),
+	/* *:not([data-vaul-drawer], [data-vaul-overlay], [data-state]),
 	::before,
 	::after {
 		-webkit-font-smoothing: antialiased;
@@ -99,7 +103,7 @@
 		transition:
 			background-color 0.15s ease,
 			color 0.1s ease !important;
-	}
+	} */
 }
 
 @layer base {
