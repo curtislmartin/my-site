@@ -1,0 +1,49 @@
+To enable modewatcher related theme transitions on mobile and web, I have had to do this work around:
+@layer base {
+	:root {
+		...
+	}
+	.dark {
+		...
+	}
+
+	:root,
+	.dark {
+		transition:
+			color-scheme 0.3s ease,
+			background-color 0.3s ease,
+			color 0.3s ease,
+			border-color 0.3s ease,
+			fill 0.3s ease,
+			stroke 0.3s ease;
+	}
+
+
+	/* Apply transitions to all elements that use theme colors */
+	*:not([data-vaul-drawer], [data-vaul-overlay]),
+	::before,
+	::after {
+		transition:
+			background-color 0.15s ease,
+			color 0.15s ease,
+			border-color 0.15s ease,
+			outline-color 0.15s ease,
+			fill 0.15s ease,
+			stroke 0.15s ease !important;
+	}
+}
+
+/* Add specific mobile optimization */
+@media (max-width: 640px) {
+	*:not([data-vaul-drawer], [data-vaul-overlay], [data-state]),
+	::before,
+	::after {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		transition:
+			background-color 0.15s ease,
+			color 0.1s ease !important;
+	}
+}
+
+This disables css transitions.

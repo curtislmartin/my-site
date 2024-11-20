@@ -21,7 +21,7 @@
 </script>
 
 <!-- bg-background -->
-<div class="mx-auto flex min-h-screen max-w-4xl flex-col px-4 sm:px-6 py-2">
+<div class="theme-transition mx-auto flex min-h-screen max-w-4xl flex-col px-4 py-2 sm:px-6">
 	<Header />
 	<main class="">
 		{@render children?.()}

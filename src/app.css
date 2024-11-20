@@ -74,6 +74,7 @@
 			stroke 0.3s ease;
 	}
 
+
 	/* Apply transitions to all elements that use theme colors */
 	*:not([data-vaul-drawer], [data-vaul-overlay]),
 	::before,
