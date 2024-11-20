@@ -21,9 +21,9 @@
 </script>
 
 <!-- bg-background -->
-<div class="flex min-h-[100svh] min-w-[100vw] flex-col">
+<div class="mx-auto flex min-h-screen max-w-4xl flex-col px-4 sm:px-6 py-2">
 	<Header />
-	<main>
+	<main class="">
 		{@render children?.()}
 	</main>
 
