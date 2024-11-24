@@ -1,33 +1,32 @@
 <script lang="ts">
 	import * as Table from '$lib/components/ui/table/index.js';
 	import { Button } from '$lib/components/ui/button/index.js';
-	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
-	import { Info } from 'lucide-svelte';
 	import type { PageData } from './$types';
+
+	import * as config from '$lib/config';
 
 	let { data } = $props();
 </script>
 
-<svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
-</svelte:head>
-
-<div class="text-column space-y-4">
+<div class="max-w-screen px-4">
 	<h1 class="pt-4">Projects</h1>
 
-	<Table.Root>
-		<Table.Body>
-			{#each data.projects as project}
-				<Table.Row>
-					<Table.Cell class="font-medium">
-						{project.title}</Table.Cell
-					>
-					<Table.Cell class="text-left italic">
-						{project.description}
-					</Table.Cell>
-				</Table.Row>
-			{/each}
-		</Table.Body>
-	</Table.Root>
+	<div class="overflow-hidden">
+		<Table.Root class="w-full table-fixed">
+			<Table.Body>
+				{#each data.projects as project}
+					<Table.Row>
+						<a href={`/projects/${project.slug}`} class="flex w-full">
+							<Table.Cell class="w-24 min-w-0 whitespace-nowrap font-medium">
+								{project.title}
+							</Table.Cell>
+							<Table.Cell class="min-w-0 truncate text-left italic">
+								{project.description}
+							</Table.Cell>
+						</a>
+					</Table.Row>
+				{/each}
+			</Table.Body>
+		</Table.Root>
+	</div>
 </div>

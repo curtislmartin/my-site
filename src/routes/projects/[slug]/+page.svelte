@@ -3,6 +3,15 @@
 	let { data }: { data: PageData } = $props();
 </script>
 
-<article class="prose dark:prose-invert max-w-none">
-	{@html data.content}
-</article>
+<svelte:head>
+	<title>{data.meta.title}</title>
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content={data.meta.title} />
+</svelte:head>
+
+<h1>{data.meta.title}</h1>
+<p>{new Date(data.meta.date).toLocaleDateString()}</p>
+
+<div class="prose max-w-none dark:prose-invert">
+	<data.content />
+</div>

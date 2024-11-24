@@ -1,5 +1,4 @@
 import { compile } from 'mdsvex';
-import { dev } from '$app/environment';
 
 export interface ProjectFrontmatter {
 	title: string;
@@ -13,21 +12,46 @@ export interface Project extends ProjectFrontmatter {
 }
 
 export async function getProjects(): Promise<Project[]> {
-	const projectFiles = import.meta.glob('/src/content/projects/*.md');
+	try {
+		const projectFiles = import.meta.glob('/src/content/projects/*.md', {
+			query: '?raw',
+			import: 'default'
+		});
 
-	const projects = await Promise.all(
-		Object.entries(projectFiles).map(async ([path, resolver]) => {
-			const resolved = await resolver();
-			const compiled = await compile(resolved.default);
-			const slug = path.split('/').pop()?.replace('.md', '');
+		const projects = await Promise.all(
+			Object.entries(projectFiles).map(async ([path, resolver]) => {
+				try {
+					const content = await resolver();
+					const compiled = await compile(content);
+					if (!compiled) throw new Error(`Failed to compile markdown for ${path}`);
 
-			return {
-				...(compiled?.data?.fm as ProjectFrontmatter),
-				slug,
-				content: compiled?.code || ''
-			};
-		})
-	);
+					const slug = path.split('/').pop()?.replace('.md', '');
+					if (!slug) throw new Error(`Failed to generate slug for ${path}`);
 
-	return projects;
+					const frontmatter = compiled.data?.fm as ProjectFrontmatter;
+					if (!frontmatter) {
+						throw new Error(`No frontmatter found in ${path}`);
+					}
+
+					const htmlContent = compiled.code
+						.replace(/<script[^>]*>.*?<\/script>/s, '')
+						.trim();
+
+					return {
+						...frontmatter,
+						slug,
+						content: htmlContent
+					};
+				} catch (error) {
+					console.error(`Error processing ${path}:`, error);
+					throw error;
+				}
+			})
+		);
+
+		return projects;
+	} catch (error) {
+		console.error('Error in getProjects:', error);
+		throw error;
+	}
 }
