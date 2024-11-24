@@ -9,9 +9,15 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<h1>{data.meta.title}</h1>
-<p>{new Date(data.meta.date).toLocaleDateString()}</p>
-
-<div class="prose max-w-none dark:prose-invert">
+<div class="prose">
+	<h1 class="m-0">{data.meta.title}</h1>
+	<p>
+		{new Date(data.meta.date).toLocaleDateString('en-AU', {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric'
+		})}
+	</p>
+	<a href={data.meta.github} target="_blank">GitHub</a>
 	<data.content />
 </div>

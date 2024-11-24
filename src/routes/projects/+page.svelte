@@ -17,10 +17,10 @@
 				{#each data.projects as project}
 					<Table.Row>
 						<a href={`/projects/${project.slug}`} class="flex w-full">
-							<Table.Cell class="w-24 min-w-0 whitespace-nowrap font-medium">
+							<Table.Cell class="w-1/4 min-w-0 truncate whitespace-nowrap font-medium">
 								{project.title}
 							</Table.Cell>
-							<Table.Cell class="min-w-0 truncate text-left italic">
+							<Table.Cell class="w-3/4 min-w-0 truncate text-left italic">
 								{project.description}
 							</Table.Cell>
 						</a>
