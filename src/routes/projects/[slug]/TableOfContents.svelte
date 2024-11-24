@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button/index.js';
-	import { ChevronLeft } from 'lucide-svelte';
+	import { Carrot } from 'lucide-svelte';
 	import * as Popover from '$lib/components/ui/popover/index.js';
 	import { marked } from 'marked';
 	let { markdownContent = '' } = $props();
@@ -27,16 +27,16 @@
 </script>
 
 <Popover.Root>
-	<Popover.Trigger bind:ref={triggerRef} class="fixed right-0 top-3/4">
-		<Button class="fixed right-0 top-3/4" variant="outline" size="icon">
+	<Popover.Trigger bind:ref={triggerRef} class="fixed right-1 top-3/4">
+		<Button class="fixed right-1 top-3/4" variant="outline" size="icon">
 			<div class="transition-transform duration-200" class:rotate-90={tocOpen}>
-				<ChevronLeft />
+				<Carrot />
 			</div>
 		</Button>
 	</Popover.Trigger>
-	<Popover.Content>
-		<h3 class="text-md">Table of Contents</h3>
-		<ul>
+	<Popover.Content class="w-full" sideOffset={10} collisionPadding={10}>
+		<div class="text-md pb-2 font-bold">Table of Contents</div>
+		<ul class="space-y-0.5">
 			{#each toc as { text, slug }}
 				<li style:padding-left="" class="text-left transition-colors hover:text-primary">
 					<a href={`#${slug}`}>{text}</a>
