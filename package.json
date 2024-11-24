@@ -23,7 +23,7 @@
 		"@types/eslint": "^9.6.1",
 		"@types/node": "^22.9.3",
 		"autoprefixer": "^10.4.20",
-		"bits-ui": "1.0.0-next.63",
+		"bits-ui": "1.0.0-next.64",
 		"clsx": "^2.1.1",
 		"eslint": "^9.15.0",
 		"eslint-config-prettier": "^9.1.0",
@@ -52,6 +52,7 @@
 		"@tailwindcss/typography": "^0.5.15",
 		"lucide": "^0.460.0",
 		"lucide-svelte": "^0.460.1",
+		"marked": "^15.0.2",
 		"mode-watcher": "^0.4.1"
 	}
 }

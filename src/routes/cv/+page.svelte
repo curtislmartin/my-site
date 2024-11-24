@@ -1,8 +1,8 @@
 <svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
+	<title>CV</title>
+	<meta name="description" content="My CV" />
 </svelte:head>
 
 <div class="text-column">
-	<h1>About this app</h1>
+	<h1>CV</h1>
 </div>

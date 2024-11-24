@@ -14,7 +14,7 @@
 	<Table.Root class="w-full table-fixed">
 		<Table.Body>
 			{#each data.projects as project}
-				<Table.Row>
+				<Table.Row class="border-b-0">
 					<a href={`/projects/${project.slug}`} class="flex w-full">
 						<Table.Cell class="w-3/5 min-w-0 truncate whitespace-nowrap font-medium sm:w-1/4">
 							{project.title}

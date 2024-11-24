@@ -10,8 +10,8 @@
 <section>
 	<h1>Hello!</h1>
 	<p class="">
-		I am a software developer and managing director of a Disability Support Service Provider in Sydney
-		Australia 👋
+		I am a software developer and managing director of a Disability Support Service Provider in
+		Sydney Australia 👋
 	</p>
 
 	<p>
@@ -27,10 +27,11 @@
 			</li>
 		{/each}
 	</ul>
-	… all with Google workspace for zero cost :)
-	<br />
+	<p>… all with Google workspace for zero cost :)</p>
+
 	<p>
-		Studying a Graduate Diploma of Information Technology at UNE (2025-2026), and working on this site to learn Sveltekit.
+		I'm studying a Graduate Diploma of Information Technology at UNE (2025-2026), playing with
+		around in Sveltekit, and working on my <a class="underline" href="/projects">projects</a> :)
 	</p>
 </section>
 
