@@ -1,3 +1,6 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -64,10 +67,10 @@
 	}
 
 	h1 {
-		@apply text-2xl font-bold pb-2;
+		@apply pb-2 text-2xl font-bold;
 	}
 	h2 {
-		@apply text-lg pb-2;
+		@apply pb-2 text-lg;
 	}
 	/*
 	:root,
