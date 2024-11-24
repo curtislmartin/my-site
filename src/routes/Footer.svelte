@@ -3,7 +3,7 @@
 	import { SvelteDate } from 'svelte/reactivity';
 </script>
 
-<footer class="flex flex-col px-4 py-1">
+<footer class="mb-12 flex flex-col px-4 py-1 sm:mb-0">
 	<div class="grid grid-cols-3">
 		<div></div>
 		<span class="flex items-center justify-center whitespace-nowrap text-xs">

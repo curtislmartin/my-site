@@ -1,5 +1,4 @@
 <script>
-	import { page } from '$app/stores';
 	import { LightSwitch } from '$lib/components/ui/light-switch';
 	import logo from '$lib/images/light-mode.svg';
 	import logoDark from '$lib/images/dark-mode.svg';
@@ -15,7 +14,7 @@
 	let lightMode = $derived($mode === 'light');
 </script>
 
-<header class="flex items-center justify-between pt-2">
+<header class="hidden sm:flex items-center justify-between pt-2">
 	<a href="/">
 		{#if lightMode}
 			<img src={logo} alt="Logo" class="h-10 w-10" />
