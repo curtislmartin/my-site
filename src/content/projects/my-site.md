@@ -10,15 +10,4 @@ categories:
 github: https://github.com/yourusername/project1
 ---
 
-This is the full project description that will be shown on the project page.
-
-## Features
-
-- Feature 1
-- Feature 2
-
-```ts
-function greet(name: string) {
-	console.log(`Hey ${name}! 👋`);
-}
-```
+Well... I thought it was time to build my own site!

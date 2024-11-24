@@ -1,24 +1,32 @@
 ---
-title: This site!
-description: Currently under construction, slowly buildinhgaaaa!
+title: ABA Exporter
+description: A tool to export ABA data from Google Sheets to a CSV file.
 date: '2024-11-24'
 published: true
 categories:
   - personal
-  - svelte
-  - frontend
-github: https://github.com/yourusername/project1
+  - aba
+  - accounting
+  - google-sheets
+  - budgeting
+github: https://github.com/curtislmartin/aba-exporter
 ---
 
-This is the full project description that will be shown on the project page.
+Not complete
 
-## Features
+## Background
 
-- Feature 1
-- Feature 2
+A couple of years ago I read the Barefoot Investor (like everyone else!), and started to think about using different accounts to manage my finances.
 
-```ts
-function greet(name: string) {
-	console.log(`Hey ${name}! 👋`);
-}
-```
+I finished my budget and spent some time sending money around to the different accounts.
+
+This began labourious and annoying quickly.
+
+Then I discovered ABA files!
+
+It took some time to get the formatting perfect, but this is the tool I built :)
+
+### Resources
+
+- [ABA Format Checker](https://www.cemtexaba.com/aba-format)
+- [Google Sheets Template - get](https://developers.google.com/sheets/api)

@@ -14,6 +14,8 @@ categories:
 github: https://github.com/curtislmartin
 ---
 
+Not complete
+
 ## Purpose
 
 Capture and store recent shift reports in a secure and accessible manner.
@@ -49,3 +51,11 @@ To comply with the NDIS provider standards and practices, NDIS Providers are req
 These reports allow our staff and team leaders to see how each participant (client) is going, and maybe see trends which could suggest they are having a hard time or potential health issues, and gain info we can pass onto staff to better support and understand the participant.
 
 Need to upload to github
+
+### Resources
+
+[Sheet Report Matcher](https://example.com)
+
+[Docs Report Matcher](https://example.com)
+
+[Form Report Matcher](https://example.com)

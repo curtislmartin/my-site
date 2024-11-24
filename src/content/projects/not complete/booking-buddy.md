@@ -2,7 +2,7 @@
 title: This site!
 description: Currently under construction, slowly buildinhgaaaa!
 date: '2024-11-24'
-published: true
+published: false
 categories:
   - personal
   - svelte

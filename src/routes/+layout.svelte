@@ -24,7 +24,9 @@
 <div class="mx-auto flex min-h-screen max-w-4xl flex-col px-4 py-2 sm:px-6">
 	<Header />
 	<main>
-		{@render children?.()}
+		<div class="mt-4">
+			{@render children?.()}
+		</div>
 	</main>
 
 	<Footer />

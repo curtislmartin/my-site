@@ -1,5 +1,5 @@
 ---
-title: Field Management App
+title: Field App
 description: A web app for care workers to manage their shifts and reporting.
 date: '2024-11-24'
 published: true
@@ -12,6 +12,7 @@ categories:
   - auth
 github: https://github.com/curtislmartin/careculture
 ---
+Not complete
 
 ## Purpose
 
